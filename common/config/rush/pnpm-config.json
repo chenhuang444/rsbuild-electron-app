@@ -46,7 +46,7 @@
    * Possible values are: `highest`, `time-based`, and `lowest-direct`.
    * The default is `highest`.
    */
-  // "resolutionMode": "time-based",
+  "resolutionMode": "time-based",
 
   /**
    * This setting determines whether PNPM will automatically install (non-optional)
@@ -236,19 +236,13 @@
    * PNPM documentation: https://pnpm.io/package_json#pnpmpackageextensions
    */
   "globalPackageExtensions": {
-    // "fork-ts-checker-webpack-plugin": {
-    //   "dependencies": {
-    //     "@babel/core": "1"
-    //   },
-    //   "peerDependencies": {
-    //     "eslint": ">= 6"
-    //   },
-    //   "peerDependenciesMeta": {
-    //     "eslint": {
-    //       "optional": true
-    //     }
-    //   }
-    // }
+    "app-builder-lib": {
+      "peerDependenciesMeta": {
+        "electron-builder-squirrel-windows": {
+          "optional": true
+        }
+      }
+    }
   },
 
   /**
